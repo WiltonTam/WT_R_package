@@ -13,7 +13,7 @@ library(tidyr)
 #' @examples
 #' var <- freadc()
 freadc <- function(...) {
-	tmpfile = paste0(Sys.getenv("temp"), "\\R_clipboard.txt")
+	tmpFile = paste0(Sys.getenv("temp"), "\\R_clipboard.txt")
 	writeLines(readLines("clipboard"),tmpFile)
 	fread(tmpFile, ...)
 }
